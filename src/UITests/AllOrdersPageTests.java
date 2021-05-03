@@ -69,11 +69,11 @@ public class AllOrdersPageTests {
 
 
     @Test
-    public void verifyDeleteSelectedButtonOne(){
+    public void verifyDeleteSelectedButtonOne() throws InterruptedException {
         // First grab all checkboxes into a list
 
         // Store the number of elements
-        int before = driver.findElements(By.cssSelector("input[type='checkbox']")).size();
+        int before = driver.findElements(By.cssSelector("input[type='checkbox']")).size();Thread.sleep(3000);
         // Delete the first row
         driver.findElement(By.id("ctl00_MainContent_orderGrid_ctl02_OrderSelector")).click();
         driver.findElement(By.id("ctl00_MainContent_btnDelete")).click();

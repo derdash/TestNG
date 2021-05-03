@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 public class AnnotationPareameters {
 
 
-    @Test (priority = 1, enabled = false)
+    @Test (priority = 1, enabled = true)
     public void m1(){
         System.out.println("m1");
     }
