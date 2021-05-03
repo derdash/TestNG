@@ -1,4 +1,4 @@
-package UITests;
+package uiTests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

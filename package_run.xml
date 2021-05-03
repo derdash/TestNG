@@ -6,7 +6,7 @@
               <packages>
                   
                 <package name="testPackage"></package>
-                  <package name="UITests"></package>
+                  <package name="uiTests"></package>
               </packages>
               
     </test>
