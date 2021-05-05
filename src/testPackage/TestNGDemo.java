@@ -14,7 +14,9 @@ public class TestNGDemo {
 
 
     @Test
-    public void test1(){
+    public void _UI(){
+
+        // Go to google.com
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\DERDASH\\Desktop\\DUO TECH\\BrowserDriver\\chromedriver.exe");
 
@@ -24,17 +26,27 @@ public class TestNGDemo {
 
         driver.manage().window().maximize();
 
-        driver.get("https://www.google.com/");
+
+
+        driver.get("https://google.com");
+        // Search for high heel shoes
         String expected = "High Heel Shoes";
-        driver.findElement(By.name("q")).sendKeys(expected  + Keys.ENTER);
-        String resultPageTitle = driver.getTitle();
+        driver.findElement(By.name("q")).sendKeys(expected + Keys.ENTER);
 
-        Assert.assertTrue( resultPageTitle.contains(expected))  ;
+        // Verify that high heel shoes is a part of the results page title
+        String resultsPageTitle = driver.getTitle();
 
+        Assert.assertTrue(resultsPageTitle.contains(expected));
+
+//        System.out.println("Testing TestNG");
     }
 
     @Test
-    public void test2() {        Assert.assertTrue(true);     }
+    public void test2() {
+        Assert.assertTrue(false);
+        Assert.assertFalse(true);
+        Assert.assertEquals("java", "avaj");
+        Assert.assertTrue(true);     }
 
     @Test
     public void test3() {        Assert.assertTrue(true);     }
